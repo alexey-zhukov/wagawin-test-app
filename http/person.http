@@ -1,0 +1,42 @@
+POST http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Some Name",
+  "age": 30,
+  "house": {
+    "id": 1
+  }
+}
+
+####
+
+POST http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "name": "Some Name",
+  "age": 30,
+  "house": {
+    "id": 10302
+  }
+}
+
+
+
+
+####
+
+GET http://localhost:8080/person?id=10202
+
+###
+
+GET http://localhost:8080/cache/person?id=10202
+
+###
+
+
+GET http://localhost:8080/persons/children
+
+###

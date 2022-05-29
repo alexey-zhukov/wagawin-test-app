@@ -1,0 +1,36 @@
+POST http://localhost:8080/house
+Content-Type: application/json
+
+{
+  "address": "Some address 1",
+  "zipCode": "123456",
+  "type": "FLAT"
+}
+
+###
+
+POST http://localhost:8080/house
+Content-Type: application/json
+
+{
+  "id": 2,
+  "address": "Some address 2",
+  "zipCode": "123456",
+  "type": "FLAT"
+}
+
+###
+
+GET http://localhost:8080/house?id=1
+
+###
+
+GET http://localhost:8080/cache/house?id=10203
+###
+
+GET http://localhost:8081/house-cache?id=3
+####
+
+GET http://localhost:8080/house?id=10302
+
+###

@@ -1,0 +1,58 @@
+POST http://localhost:8080/child
+Content-Type: application/json
+
+{
+  "name": "Some Name",
+  "type": "Son",
+  "age": 10,
+  "parent": {
+    "id": 10202
+  }
+}
+
+
+####
+
+POST http://localhost:8080/child/meal?childId=186615
+Content-Type: application/json
+
+{
+  "id": 1,
+  "favIndex": 1
+}
+
+###
+POST http://localhost:8080/color?childId=186615&color=white
+Content-Type: application/json
+
+{}
+
+
+####
+
+GET http://localhost:8080/child/info?id=186615
+
+####
+
+GET http://localhost:8080/cache/child/info?id=186615
+
+####
+
+GET http://localhost:8080/cache/color?id=186615
+
+
+###
+
+POST http://localhost:8080/child
+Content-Type: application/json
+
+{
+  "name": "Some Name",
+  "age": 10,
+  "parent": {
+    "id": 1
+  }
+}
+
+###
+

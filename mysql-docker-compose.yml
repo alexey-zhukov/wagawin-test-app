@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  db:
+    container_name: wagawin-mysql
+    image: mysql:8.0.29
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'wagawin'
+      MYSQL_ROOT_PASSWORD: 'my-secret-pw'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - type: bind
+        source: c:\Users\Admin\IdeaProjects\test-app\mysql-volume
+        target: /var/lib/mysql/
